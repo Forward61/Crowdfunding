@@ -15,6 +15,7 @@ buildNumber.properties
 ### Java template
 # Compiled class file
 *.class
+jdbc.properties
 
 # Log file
 *.log
