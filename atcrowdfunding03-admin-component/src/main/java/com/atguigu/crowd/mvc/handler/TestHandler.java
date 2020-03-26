@@ -16,10 +16,11 @@ public class TestHandler {
     @Autowired
     private AdminService adminService;
 
-    @RequestMapping("/test/ssm.html")
+    @RequestMapping("/ssm.html")
     public String testSsm(ModelMap modelMap){
         List<Admin> adminList = adminService.getAll();
         modelMap.addAttribute("adminList", adminList);
+
         return "target";
     }
 }

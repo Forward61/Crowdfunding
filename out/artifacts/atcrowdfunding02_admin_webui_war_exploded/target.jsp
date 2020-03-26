@@ -8,9 +8,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Index jsp title</title>
+    <title>target jsp title</title>
 </head>
 <body>
-    <a href="${pageContext.request.contextPath}/ssm.html">测试s</a>
+    <a href="${pageContext.request.contextPath}/test/ssm.html">测试s</a>
+    ${requestScope.adminList}
 </body>
 </html>

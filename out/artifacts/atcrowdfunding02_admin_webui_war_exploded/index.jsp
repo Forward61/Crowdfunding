@@ -11,6 +11,6 @@
     <title>Index jsp title</title>
 </head>
 <body>
-    <a href="${pageContext.request.contextPath}/ssm.html">测试s</a>
+    <a href="${pageContext.request.contextPath}/test/ssm.html">测试s</a>
 </body>
 </html>

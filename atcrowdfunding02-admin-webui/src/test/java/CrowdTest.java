@@ -45,11 +45,11 @@ public class CrowdTest {
 	@Autowired
 	private AdminService adminService;
 
-	@Test
-	public void testTx() {
-		Admin admin = new Admin(null, "jerry322Exce", "123456", "杰瑞", "jerry@qq.com", null);
-		adminService.saveAdmin(admin);
-	}
+//	@Test
+//	public void testTx() {
+//		Admin admin = new Admin(null, "jerry322Exce", "123456", "杰瑞", "jerry@qq.com", null);
+//		adminService.saveAdmin(admin);
+//	}
 //
 	@Test
 	public void testLog() {
