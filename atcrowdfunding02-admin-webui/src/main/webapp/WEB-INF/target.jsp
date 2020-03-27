@@ -9,9 +9,11 @@
 <html>
 <head>
     <title>target jsp title</title>
+    <base href="http://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}/ssm.html"/>
+
 </head>
 <body>
-    <a href="${pageContext.request.contextPath}/ssm.html">测试s</a>
+    <a href="ssm.html">测试s</a>
     ${requestScope.adminList}
 </body>
 </html>
