@@ -1,6 +1,7 @@
 package com.atguigu.crowd.mvc.handler;
 
 import com.atguigu.crowd.entity.Admin;
+import com.atguigu.crowd.entity.Student;
 import com.atguigu.crowd.service.api.AdminService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -35,6 +36,9 @@ public class TestHandler {
         for (Integer number : array){
             logger.info("number :   -- >" + number);
         }
+        Student student = new Student();
+        student.setName("testName");
+        System.out.println("测试lambda表达式的值" + student.getName());
         return "success";
 
     }
