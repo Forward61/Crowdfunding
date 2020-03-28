@@ -17,6 +17,7 @@ import java.util.List;
 
 @Controller
 public class TestHandler {
+    Logger logger = LoggerFactory.getLogger(TestHandler.class);
 
     @Autowired
     private AdminService adminService;
@@ -37,9 +38,21 @@ public class TestHandler {
             logger.info("number :   -- >" + number);
         }
         Student student = new Student();
-        student.setName("testName");
-        System.out.println("测试lambda表达式的值" + student.getName());
+        student.setStuName("testName");
+        System.out.println("测试lambda表达式的值" + student.getStuName());
         return "success";
 
+    }
+
+
+    @ResponseBody
+    @RequestMapping("/send/compose/object.json")
+    public String testReceiveComposeObject(@RequestBody Student student) {
+
+
+        logger.info(student.toString());
+
+
+        return "success";
     }
 }
