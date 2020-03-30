@@ -3,6 +3,7 @@ package com.atguigu.crowd.mvc.handler;
 import com.atguigu.crowd.entity.Admin;
 import com.atguigu.crowd.entity.Student;
 import com.atguigu.crowd.service.api.AdminService;
+import com.atguigu.crowd.util.ResultEntity;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +27,7 @@ public class TestHandler {
     public String testSsm(ModelMap modelMap){
         List<Admin> adminList = adminService.getAll();
         modelMap.addAttribute("adminList", adminList);
-
+        System.out.println(10/0);
         return "target";
     }
 
@@ -54,5 +55,15 @@ public class TestHandler {
 
 
         return "success";
+    }
+
+    @ResponseBody
+    @RequestMapping("/send/compose/objectResultEntity.json")
+    public ResultEntity<Student> objectResultEntity(@RequestBody Student student) {
+
+        logger.info(student.toString());
+        ResultEntity<Student> resultEntity = ResultEntity.successWithData(student);
+
+        return resultEntity;
     }
 }
