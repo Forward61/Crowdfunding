@@ -3,6 +3,7 @@ package com.atguigu.crowd.mvc.handler;
 import com.atguigu.crowd.entity.Admin;
 import com.atguigu.crowd.entity.Student;
 import com.atguigu.crowd.service.api.AdminService;
+import com.atguigu.crowd.util.CrowdUtil;
 import com.atguigu.crowd.util.ResultEntity;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 @Controller
@@ -24,10 +26,13 @@ public class TestHandler {
     private AdminService adminService;
 
     @RequestMapping("/ssm.html")
-    public String testSsm(ModelMap modelMap){
+    public String testSsm(ModelMap modelMap, HttpServletRequest request){
+        boolean requestType = CrowdUtil.judgeRequestType(request);
+        logger.info("请求类型 : " + requestType);
+
         List<Admin> adminList = adminService.getAll();
         modelMap.addAttribute("adminList", adminList);
-        System.out.println(10/0);
+//        System.out.println(10/0);
         return "target";
     }
 
@@ -48,9 +53,11 @@ public class TestHandler {
 
     @ResponseBody
     @RequestMapping("/send/compose/object.json")
-    public String testReceiveComposeObject(@RequestBody Student student) {
+    public String testReceiveComposeObject(@RequestBody Student student,HttpServletRequest request) {
 
 
+        boolean requestType = CrowdUtil.judgeRequestType(request);
+        logger.info("请求类型 : " + requestType);
         logger.info(student.toString());
 
 
