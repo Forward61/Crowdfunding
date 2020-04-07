@@ -1,5 +1,6 @@
 package com.atguigu.crowd.mvc.config;
 
+import com.atguigu.crowd.exception.LoginFailedException;
 import com.atguigu.crowd.util.CrowdUtil;
 import com.atguigu.crowd.util.ResultEntity;
 import com.google.gson.Gson;
@@ -14,6 +15,19 @@ import java.io.IOException;
 ///ControllerAdvice 表明当前类是一个机遇注解的异常类
 @ControllerAdvice
 public class CrowdExecptionResolver {
+
+    @ExceptionHandler(value = LoginFailedException.class)
+    public ModelAndView resolverLoginFailedPointExecption(
+            //实际捕获到的异常类型
+            LoginFailedException exception,
+            //当前请求对象
+            HttpServletRequest request,
+            //当前响应对象
+            HttpServletResponse response
+    ) throws IOException {
+        String viewName = "admin-login";
+        return commonResolver(viewName,exception,request,response);
+    }
 
     @ExceptionHandler(value = NullPointerException.class)
     public ModelAndView resolverNullPointExecption(
