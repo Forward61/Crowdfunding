@@ -1,14 +1,14 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="atcrowdfunding02-admin-webui:Web exploded">
-    <output-path>$PROJECT_DIR$/out/</output-path>
+  <artifact type="exploded-war" name="atcrowdfunding02-admin-webui:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/atcrowdfunding02_admin_webui_war_exploded</output-path>
     <root id="root">
-      <element id="javaee-facet-resources" facet="atcrowdfunding02-admin-webui/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="atcrowdfunding02-admin-webui" />
           <element id="module-output" name="atcrowdfunding01-admin-parent" />
           <element id="jpa-descriptors" facet="atcrowdfunding02-admin-webui/jpa/JPA" />
           <element id="module-output" name="atcrowdfunding03-admin-component" />
+          <element id="jpa-descriptors" facet="atcrowdfunding03-admin-component/jpa/JPA" />
           <element id="module-output" name="atcrowdfunding04-admin-entity" />
           <element id="module-output" name="atcrowdfunding05-common-util" />
           <element id="module-output" name="atcrowdfunding06-common-reverse" />
@@ -56,6 +56,7 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-beans:4.3.20.RELEASE" />
         </element>
       </element>
+      <element id="javaee-facet-resources" facet="atcrowdfunding02-admin-webui/web/Web" />
     </root>
   </artifact>
 </component>

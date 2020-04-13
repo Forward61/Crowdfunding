@@ -28,6 +28,21 @@
         <!-- 装配数据源-->
         <property name="dataSource" ref="dataSource"/>
 
+        <!--配置插件 -->
+        <property name="plugins">
+            <array>
+                <bean class="com.github.pagehelper.PageHelper">
+                    <property name="properties">
+                        <!-- 配置数据库方言，数据库-->
+                        <props >
+                            <prop key="dialetct">mysql</prop>
+                            <prop key="reasonable">true</prop>
+                        </props>
+
+                    </property>
+                </bean>
+            </array>
+        </property>
 
     </bean>
     <!--配置MapperScannerConfigurer来扫描Mapper接口所在包 -->
