@@ -39,7 +39,7 @@ public class AdminServiceImpl implements AdminService {
 
         // 2.生成创建时间
         Date date = new Date();
-        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        SimpleDateFormat format = new SimpleDateFormat("yyyyMMdd HH:mm:ss");
         String createTime = format.format(date);
         admin.setCreateTime(createTime);
 
