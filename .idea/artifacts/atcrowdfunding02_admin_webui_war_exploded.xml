@@ -55,6 +55,7 @@
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-config:4.2.10.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-taglibs:4.2.10.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-acl:4.2.10.RELEASE" />
+          <element id="library" level="project" name="Maven: org.apache.commons:commons-lang3:3.10" />
           <element id="library" level="project" name="Maven: com.alibaba:druid:1.0.31" />
           <element id="library" level="project" name="Maven: org.springframework:spring-beans:4.3.21.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-core:4.3.20.RELEASE" />
